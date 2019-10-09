@@ -1,3 +1,3 @@
 #if !SANDWICH_MATH_INLINE
-    #include "matrix.ipp"
+    #include "axis_angle.ipp"
 #endif
