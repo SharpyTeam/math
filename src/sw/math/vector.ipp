@@ -105,6 +105,10 @@ INLINE Vector2 Vector2::Perpendicular() const {
     return Vector2(y, -x);
 }
 
+INLINE Vector2 Vector2::operator-() const {
+    return Vector2(-x, -y);
+}
+
 INLINE Vector2 Vector2::operator+(const Vector2 &other) const {
     return Vector2(x + other.x, y + other.y);
 }
@@ -199,12 +203,6 @@ INLINE Vector2 &Vector2::Set(const Vector2 &other) {
 INLINE Vector2 &Vector2::Zero() {
     x = 0.0;
     y = 0.0;
-    return *this;
-}
-
-INLINE Vector2 &Vector2::operator-() {
-    x = -x;
-    y = -y;
     return *this;
 }
 
@@ -368,6 +366,10 @@ INLINE Vector3 Vector3::Normalized() const {
     return Vector3(x / l, y / l, z / l);
 }
 
+INLINE Vector3 Vector3::operator-() const {
+    return Vector3(-x, -y, -z);
+}
+
 INLINE Vector3 Vector3::operator+(const Vector3 &other) const {
     return Vector3(x + other.x, y + other.y, z + other.z);
 }
@@ -476,13 +478,6 @@ INLINE Vector3 &Vector3::Zero() {
     x = 0;
     y = 0;
     z = 0;
-    return *this;
-}
-
-INLINE Vector3 &Vector3::operator-() {
-    x = -x;
-    y = -y;
-    z = -z;
     return *this;
 }
 
@@ -650,6 +645,10 @@ INLINE Vector4 Vector4::Normalized() const {
     return Vector4(x / l, y / l, z / l, w / l);
 }
 
+INLINE Vector4 Vector4::operator-() const {
+    return Vector4(-x, -y, -z, -w);
+}
+
 INLINE Vector4 Vector4::operator+(const Vector4 &other) const {
     return Vector4(x + other.x, y + other.y, z + other.z, w + other.w);
 }
@@ -772,14 +771,6 @@ INLINE Vector4 &Vector4::Zero() {
     y = 0;
     z = 0;
     w = 0;
-    return *this;
-}
-
-INLINE Vector4 &Vector4::operator-() {
-    x = -x;
-    y = -y;
-    z = -z;
-    w = -w;
     return *this;
 }
 

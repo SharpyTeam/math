@@ -40,6 +40,7 @@ public:
     Vector2 Normalized() const;
     Vector2 Perpendicular() const;
 
+    Vector2 operator-() const;
     Vector2 operator+(double scalar) const;
     Vector2 operator-(double scalar) const;
     Vector2 operator*(double scalar) const;
@@ -61,7 +62,6 @@ public:
     Vector2 &Set(const Vector2 &other);
     Vector2 &Zero();
 
-    Vector2 &operator-();
     Vector2 &operator=(double scalar);
     Vector2 &operator+=(double scalar);
     Vector2 &operator-=(double scalar);
@@ -109,6 +109,7 @@ public:
     Vector3 Min(const Vector3 &other) const;
     Vector3 Normalized() const;
 
+    Vector3 operator-() const;
     Vector3 operator+(double scalar) const;
     Vector3 operator-(double scalar) const;
     Vector3 operator*(double scalar) const;
@@ -131,7 +132,6 @@ public:
     Vector3 &Set(const Vector2 &other, double z);
     Vector3 &Zero();
 
-    Vector3 &operator-();
     Vector3 &operator=(double scalar);
     Vector3 &operator+=(double scalar);
     Vector3 &operator-=(double scalar);
@@ -179,6 +179,7 @@ public:
     Vector4 Min(const Vector4 &other) const;
     Vector4 Normalized() const;
 
+    Vector4 operator-() const;
     Vector4 operator+(double scalar) const;
     Vector4 operator-(double scalar) const;
     Vector4 operator*(double scalar) const;
@@ -202,7 +203,6 @@ public:
     Vector4 &Set(const Vector2 &other, double z, double w);
     Vector4 &Zero();
 
-    Vector4 &operator-();
     Vector4 &operator=(double scalar);
     Vector4 &operator+=(double scalar);
     Vector4 &operator-=(double scalar);
